@@ -1,0 +1,61 @@
+{
+  "home": {
+    "smallgreet": "Hi! Welcome",
+    "greet": "IT Services of Center of Digital Education and Professional Development",
+    "bottomgreet": "Faculty of Humanities and Social Sciences, University of Sri jayewardenepura, Sri Lanka."
+  },
+  "work": {
+    "title": "Work",
+    "items": [
+      {
+        "title": "Meeting Minutes Management System",
+        "imgName": "MMS",
+        "description": "Platform developed to generate/manage Meeting Minutes of the faculty",
+        "isAvailable": false
+      },
+      {
+        "title": "Exam Schedule Management System",
+        "imgName": "MMS",
+        "description": "Platform developed to generate/manage exam schedules of the faculty",
+        "isAvailable": false
+      },
+      {
+        "title": "Virtual Tour",
+        "imgName": "Virtual",
+        "description": "To experience the look of the University of Sri Jayewardenepura just using your Computer or Mobile device. Explorers also can explore the HSS Faculty and it's departments.",
+        "isAvailable": false
+      },
+      {
+        "title": "Encyclopedic Dictionary of Humanities and Social Science Research",
+        "imgName": "USJ",
+        "description": "Dictionary that consists of explanations for research-related words in the Sinhala language.",
+        "isAvailable": true
+      }
+    ]
+  },
+  "techStack": {
+    "title": "Tech Stack",
+    "stack": [
+      { "title": "React JS", "imgName": "React" },
+      { "title": "Angular JS", "imgName": "Angular" },
+      { "title": "Node JS", "imgName": "Node" },
+      { "title": "Express JS", "imgName": "Express" },
+      { "title": "MongoDB", "imgName": "Mongo" },
+      { "title": "Docker", "imgName": "Docker" }
+    ]
+  },
+  "not_found": {
+    "main": "Look like you're lost!",
+    "body": "Don't worry. You can use the below button to navigate back to the home.",
+    "button": "Bring me Home"
+  },
+  "top_nav": {
+    "about": "About",
+    "work": "Work",
+    "tech": "Tech Stack"
+  },
+  "buttons": {
+    "letMeSee": "Let me see!",
+    "coming" : "Coming Soon"
+  }
+}

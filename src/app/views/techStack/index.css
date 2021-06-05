@@ -1,0 +1,11 @@
+.stack-img {
+  width: 10%;
+  height: auto;
+  object-fit: contain;
+}
+
+.stack-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}

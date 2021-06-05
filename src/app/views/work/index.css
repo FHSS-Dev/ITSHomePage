@@ -1,0 +1,12 @@
+.work-title {
+  font-size: 2rem;
+  color: black;
+  font-family: "Montserrat";
+}
+
+.work-card-container {
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
