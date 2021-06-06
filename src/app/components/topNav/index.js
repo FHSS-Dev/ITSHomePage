@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { HashLink } from "react-router-hash-link";
+import StickyBox from "react-sticky-box";
 
 import pageConstants from "../../consts/pageConsts.json";
 import { Images } from "../../theme/Images";
@@ -23,7 +24,7 @@ export default class TopNavBar extends Component {
   }
 
   onScroll = (evt) => {
-    if (window.scrollY > 100 && !this.state.topBarShadowActivated) {
+    if (window.scrollY > 0 && !this.state.topBarShadowActivated) {
       this.setState({ topBarShadowActivated: true });
     } else if (window.scrollY === 0 && this.state.topBarShadowActivated) {
       this.setState({ topBarShadowActivated: false });
@@ -52,29 +53,31 @@ export default class TopNavBar extends Component {
     }`;
 
     return (
-      <div className={mainCls}>
-        <img
-          onClick={() => window.open("http://cdepd.fhss.sjp.ac.lk")}
-          className="cdepd-logo"
-          src={Images.CDEPD}
-          alt="CDEPD Logo"
-        />
-        <div className="top-nav-items">
-          {Array(this.NavItems.length)
-            .fill()
-            .map((_, i) => i)
-            .map((i) => (
-              <HashLink
-                smooth
-                key={this.NavItems[i].id}
-                to={this.NavItems[i].href}
-                className="top-nav-text"
-              >
-                {pageConstants.top_nav[this.NavItems[i].id]}
-              </HashLink>
-            ))}
+      <StickyBox offsetTop={0} className="top-nav-bar-container">
+        <div className={mainCls}>
+          <img
+            onClick={() => window.open("http://cdepd.fhss.sjp.ac.lk")}
+            className="cdepd-logo"
+            src={Images.CDEPD}
+            alt="CDEPD Logo"
+          />
+          <div className="top-nav-items">
+            {Array(this.NavItems.length)
+              .fill()
+              .map((_, i) => i)
+              .map((i) => (
+                <HashLink
+                  smooth
+                  key={this.NavItems[i].id}
+                  to={this.NavItems[i].href}
+                  className="top-nav-text"
+                >
+                  {pageConstants.top_nav[this.NavItems[i].id]}
+                </HashLink>
+              ))}
+          </div>
         </div>
-      </div>
+      </StickyBox>
     );
   }
 }

@@ -1,16 +1,22 @@
+.top-nav-bar-container {
+  width: inherit;
+  background-color: white;
+  z-index: 100;
+  margin: 0px !important;
+}
+
 .top-nav-bar {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   flex-wrap: wrap;
   align-items: center;
-  margin-top: 20px;
-  position: sticky;
+  position: absolute;
   top: 0;
   background-color: white;
   flex: 1;
   z-index: 100;
-  padding-bottom: 20px;
+  padding: 20px 0px 20px 0px;
   width: inherit
 }
 
@@ -47,33 +53,70 @@
 
 @media (max-width: 768px) {
   .top-nav-text {
-    font-size: 14px;
+    font-size: 16px;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+  .top-nav-items {
+    padding-right: 20px;
+  }
+  .cdepd-logo {
+    width: 150px;
+    margin-left: 20px;
   }
 }
 
 @media (max-width: 600px) {
   .top-nav-text {
     font-size: 12px;
+    margin-left: 10px;
+    margin-top: 10px;
   }
   .top-nav-items {
     padding-right: 20px;
+  }
+  .cdepd-logo {
+    width: 150px;
+    margin-left: 20px;
+  }
+  .top-nav-bar {
+    position: sticky;
   }
 }
 
 @media (max-width: 480px) {
+  .top-nav-bar {
+    position: sticky;
+  }
   .top-nav-text {
     font-size: 12px;
+    margin-left: 10px;
+    margin-top: 10px;
   }
   .top-nav-items {
     padding-right: 20px;
+  }
+  .cdepd-logo {
+    width: 100px;
+    margin-left: 20px;
   }
 }
 
 @media (max-width: 320px) {
+  .top-nav-bar {
+    position: sticky;
+  }
   .top-nav-text {
     font-size: 12px;
+    margin-left: 10px;
+    margin-top: 10px;
   }
   .top-nav-items {
     padding-right: 20px;
   }
+  .cdepd-logo {
+    width: 90px;
+    margin-left: 20px;
+  }
+  
 }
