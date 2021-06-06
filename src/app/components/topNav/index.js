@@ -1,34 +1,58 @@
-import React, { Component } from "react"
-import { HashLink } from "react-router-hash-link"
+import React, { Component } from "react";
+import { HashLink } from "react-router-hash-link";
 
-import pageConstants from "../../consts/pageConsts.json"
-import { Images } from "../../theme/Images"
-import "./index.css"
+import pageConstants from "../../consts/pageConsts.json";
+import { Images } from "../../theme/Images";
+import "./index.css";
 
 export default class TopNavBar extends Component {
   constructor() {
-    super()
-    this.NavItems = Object.values(NavItems)
+    super();
+    this.NavItems = Object.values(NavItems);
+    this.state = {
+      topBarShadowActivated: false,
+    };
   }
 
-  onClickNavItem = item => {
+  componentDidMount() {
+    document.addEventListener("scroll", this.onScroll);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener("scroll", this.onScroll);
+  }
+
+  onScroll = (evt) => {
+    if (window.scrollY > 100 && !this.state.topBarShadowActivated) {
+      this.setState({ topBarShadowActivated: true });
+    } else if (window.scrollY === 0 && this.state.topBarShadowActivated) {
+      this.setState({ topBarShadowActivated: false });
+    }
+  };
+
+  onClickNavItem = (item) => {
     switch (item.value) {
       case NavItems.Home.value:
-        break
+        break;
       case NavItems.About.value:
-        break
+        break;
       case NavItems.Work.value:
-        break
+        break;
       case NavItems.Tech.value:
-        break
+        break;
       default:
-        break
+        break;
     }
-  }
+  };
 
   render() {
+    const { topBarShadowActivated } = this.state;
+    const mainCls = `top-nav-bar ${
+      topBarShadowActivated ? "shadow-activated" : ""
+    }`;
+
     return (
-      <div className="top-nav-bar">
+      <div className={mainCls}>
         <img
           onClick={() => window.open("http://cdepd.fhss.sjp.ac.lk")}
           className="cdepd-logo"
@@ -39,7 +63,7 @@ export default class TopNavBar extends Component {
           {Array(this.NavItems.length)
             .fill()
             .map((_, i) => i)
-            .map(i => (
+            .map((i) => (
               <HashLink
                 smooth
                 key={this.NavItems[i].id}
@@ -51,7 +75,7 @@ export default class TopNavBar extends Component {
             ))}
         </div>
       </div>
-    )
+    );
   }
 }
 
@@ -76,4 +100,4 @@ const NavItems = {
     value: "Tech Stack",
     href: "#tech",
   },
-}
+};
