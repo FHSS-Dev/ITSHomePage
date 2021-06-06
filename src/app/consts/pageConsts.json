@@ -11,25 +11,29 @@
         "title": "Meeting Minutes Management System",
         "imgName": "MMS",
         "description": "Platform developed to generate/manage Meeting Minutes of the faculty",
-        "isAvailable": false
+        "isAvailable": false,
+        "href": ""
       },
       {
         "title": "Exam Schedule Management System",
         "imgName": "MMS",
         "description": "Platform developed to generate/manage exam schedules of the faculty",
-        "isAvailable": false
+        "isAvailable": false,
+        "href": ""
       },
       {
         "title": "Virtual Tour",
         "imgName": "Virtual",
         "description": "To experience the look of the University of Sri Jayewardenepura just using your Computer or Mobile device. Explorers also can explore the HSS Faculty and it's departments.",
-        "isAvailable": false
+        "isAvailable": false,
+        "href": ""
       },
       {
         "title": "Encyclopedic Dictionary of Humanities and Social Science Research",
         "imgName": "USJ",
         "description": "Dictionary that consists of explanations for research-related words in the Sinhala language.",
-        "isAvailable": true
+        "isAvailable": true,
+        "href": "http://dictionary.research.fhss.sjp.ac.lk"
       }
     ]
   },

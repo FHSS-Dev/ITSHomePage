@@ -20,6 +20,7 @@ export default class WorkView extends Component {
                 image={Images.work[items[i].imgName]}
                 title={items[i].title}
                 isAvailable={items[i].isAvailable}
+                href={items[i].href}
               />
             ))}
         </div>
