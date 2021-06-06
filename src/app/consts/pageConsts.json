@@ -56,6 +56,14 @@
   },
   "buttons": {
     "letMeSee": "Let me see!",
-    "coming" : "Coming Soon"
+    "coming": "Coming Soon"
+  },
+  "footer": {
+    "copyright": "Copyright © {year} Center for Digital Education and Professional Development, Faculty of Humanities and Social Sciences, University of Sri Jayewardenepura, Sri Lanka.",
+    "all_rights": "All Rights Reserved.",
+    "powered": " Powered By ",
+    "cdepd": "ITS of CDEPD.",
+    "cdepd_link": "http://cdepd.fhss.sjp.ac.lk",
+    "fhss_link": "http://fhss.sjp.ac.lk"
   }
 }

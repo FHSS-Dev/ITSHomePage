@@ -1,13 +1,14 @@
-import React, { Component } from "react"
-import { withRouter } from "react-router-dom"
-import MetaTags from "react-meta-tags"
-import "./index.css"
+import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
+import MetaTags from "react-meta-tags";
+import "./index.css";
 
-import metaConsts from "../../consts/metaConsts.json"
-import pageConsts from "../../consts/pageConsts.json"
-import TopNavBar from "../../components/topNav"
-import WorkView from "../../views/work"
-import TechStackView from "../../views/techStack"
+import metaConsts from "../../consts/metaConsts.json";
+import pageConsts from "../../consts/pageConsts.json";
+import TopNavBar from "../../components/topNav";
+import WorkView from "../../views/work";
+import TechStackView from "../../views/techStack";
+import Footer from "../../components/footer";
 
 class Home extends Component {
   render() {
@@ -29,9 +30,10 @@ class Home extends Component {
         </div>
         <WorkView />
         <TechStackView />
+        <Footer />
       </div>
-    )
+    );
   }
 }
 
-export default withRouter(Home)
+export default withRouter(Home);
